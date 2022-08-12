@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="2-1.css" />
+  </head>
+  <body>
+    <header>
+      <h2>웹프로그래밍 공부</h2>
+      <h3>thgee</h3>
+    </header>
+    <section class="main">
+      <nav>
+        <h3>목차</h3>
+        <ul>
+          <li>2-1</li>
+          <li>2-2</li>
+          <li>2-3</li>
+        </ul>
+      </nav>
+      <div class="practice">
+        <div class="p2-1">
+          <h3>2-1 : 유튜브 동영상 재생</h3>
+          <iframe
+            width="700"
+            height="315"
+            src="https://www.youtube.com/embed/dbpKJuP7KKQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="p2-2">
+          <h3>2-2 : 로그인 폼 만들기</h3>
+          <fieldset>
+            <legend>Login</legend>
+            <label for="username">Username</label>
+            <input type="text" name="Usernname" />
+            <label for="Password">Password</label>
+            <input type="password" name="Password" />
+          </fieldset>
+        </div>
+        <div class="p2-3">
+          <h3>2-3 : 다양한 형태 폼 만들기</h3>
+          <fieldset>
+            <legend>도형 서식 입력</legend>
+            <div class="container">
+              <div class="selectLine">
+                <label for="selectLine">선종류</label>
+                <select name="selectLine">
+                  <option>선없음</option>
+                  <option>실선</option>
+                  <option>점선</option>
+                </select>
+              </div>
+              <div class="widthAndColor">
+                <label for="width">선두께</label>
+                <input type="number" min="0" max="10" />
+                <label for="width">선색</label>
+                <input type="color" value="#00bfff" />
+              </div>
+              <div class="opacity">
+                <label>투명도 (0 ~ 100)</label>
+                <input type="range" min="0" max="100" list="tickmark" />
+                <datalist id="tickmark">
+                  <option value="0"></option>
+                  <option value="50"></option>
+                  <option value="100"></option>
+                </datalist>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <aside>
+        <h3>practice2의 주 내용</h3>
+        <ol>
+          <li>시멘틱 태그 이해</li>
+          <li>youtube 동영상 재생</li>
+          <li>웹폼 활용</li>
+        </ol>
+      </aside>
+    </section>
+    <footer>
+      <p>copyright</p>
+    </footer>
+  </body>
+</html>

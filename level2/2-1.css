@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  background-color: yellow;
+  padding: 5px;
+  padding-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.main {
+  display: flex;
+  background-color: orange;
+}
+
+.main nav {
+  margin: 10px;
+  flex: 1 1 20%;
+}
+
+.main .practice {
+  background-color: green;
+  flex: 1 1 60%;
+}
+
+.main aside {
+  flex: 1 1 20%;
+}
+
+.main aside ol {
+  margin-left: 30px;
+}
+
+.main .practice .p2-1,
+.p2-2 {
+  border-bottom: 1px solid white;
+}
+
+.main .practice .p2-3 .container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: purple;
+  padding-bottom: 100%;
+}
