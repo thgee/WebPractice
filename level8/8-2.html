@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ol li {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr />
+    <section>
+      <ol
+        type="A"
+        style="background-color: yellowgreen"
+        onclick="addItem(this)"
+      >
+        <li>물을 끓인다.</li>
+      </ol>
+    </section>
+
+    <script>
+      function addItem(self) {
+        const text = prompt("라면을 끓이는 순서를 입력하라");
+        let li = document.createElement("li");
+        li.textContent = text;
+
+        const ol = self;
+        ol.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

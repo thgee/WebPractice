@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        border: none;
+        border-radius: 10px;
+        background-color: pink;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .hidden {
+        color: blue;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      다음 빈 곳에 숨은 단어는?
+      <button>show/hidden</button>
+    </h1>
+    <hr />
+    <ul>
+      <li>i (<span class="hidden">love</span>) you</li>
+      <li>CSS is cascading (<span class="hidden">Style</span>) Sheet.</li>
+      <li>응답하라 (<span class="hidden">1988</span>)</li>
+    </ul>
+
+    <script>
+      function hide() {
+        const hiddenText = document.querySelectorAll(".hidden");
+        hiddenText.forEach((el) => {
+          let styleSheet = window.getComputedStyle(el);
+          let value = styleSheet.getPropertyValue("visibility");
+          if (value == "visible") {
+            el.style.visibility = "hidden";
+          } else {
+            el.style.visibility = "visible";
+          }
+        });
+      }
+      const hideButton = document.querySelector("button");
+      hideButton.addEventListener("click", hide);
+    </script>
+  </body>
+</html>
