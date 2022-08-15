@@ -14,7 +14,7 @@ function init() {
   }
 }
 
-function hide() {
+function hide(e) {
   textbox.style.visibility = "hidden";
 }
 
@@ -40,10 +40,9 @@ function setTextBox(text, e) {
   textbox.style.border = "1px solid green";
   textbox.style.backgroundColor = "aliceblue";
   textbox.style.position = "absolute";
-  textbox.style.left = `${e.x}px`;
-  textbox.style.top = `${e.y}px`;
+  textbox.style.left = `${e.pageX}px`;
+  textbox.style.top = `${e.pageY}px`;
   textbox.style.width = "150px";
   textbox.style.height = "100px";
 }
-
 init();
