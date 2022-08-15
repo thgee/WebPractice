@@ -14,7 +14,7 @@ function init() {
   }
 }
 
-function hide(e) {
+function hide() {
   textbox.style.visibility = "hidden";
 }
 
